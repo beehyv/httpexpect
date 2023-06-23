@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/gorilla/websocket"
+	"github.com/fasthttp/websocket"
 )
 
 // WebsocketMessage provides methods to inspect message read from WebSocket connection.
@@ -170,7 +170,7 @@ func (wm *WebsocketMessage) NotTextMessage() *WebsocketMessage {
 // Type succeeds if WebSocket message type is one of the given.
 //
 // WebSocket message types are defined in RFC 6455, section 11.8.
-// See also https://godoc.org/github.com/gorilla/websocket#pkg-constants
+// See also https://godoc.org/github.com/fasthttp/websocket#pkg-constants
 //
 // Example:
 //
@@ -188,7 +188,7 @@ func (wm *WebsocketMessage) Type(types ...int) *WebsocketMessage {
 // NotType succeeds if WebSocket message type is none of the given.
 //
 // WebSocket message types are defined in RFC 6455, section 11.8.
-// See also https://godoc.org/github.com/gorilla/websocket#pkg-constants
+// See also https://godoc.org/github.com/fasthttp/websocket#pkg-constants
 //
 // Example:
 //
@@ -310,7 +310,7 @@ func (wm *WebsocketMessage) checkNotType(opChain *chain, types ...int) {
 // Code fails if WebSocket message type is not "8 - Connection Close Frame".
 //
 // WebSocket close codes are defined in RFC 6455, section 11.7.
-// See also https://godoc.org/github.com/gorilla/websocket#pkg-constants
+// See also https://godoc.org/github.com/fasthttp/websocket#pkg-constants
 //
 // Example:
 //
@@ -330,7 +330,7 @@ func (wm *WebsocketMessage) Code(codes ...int) *WebsocketMessage {
 // NotCode fails if WebSocket message type is not "8 - Connection Close Frame".
 //
 // WebSocket close codes are defined in RFC 6455, section 11.7.
-// See also https://godoc.org/github.com/gorilla/websocket#pkg-constants
+// See also https://godoc.org/github.com/fasthttp/websocket#pkg-constants
 //
 // Example:
 //

@@ -37,7 +37,7 @@ Workflow:
 
 ##### WebSocket support (thanks to [@tyranron](https://github.com/tyranron))
 
-* Upgrade an HTTP connection to a WebSocket connection (we use [`gorilla/websocket`](https://github.com/gorilla/websocket) internally).
+* Upgrade an HTTP connection to a WebSocket connection (we use [`fasthttp/websocket`](https://github.com/fasthttp/websocket) internally).
 * Interact with the WebSocket server.
 * Inspect WebSocket connection parameters and WebSocket messages.
 
@@ -128,7 +128,7 @@ See [`_examples`](_examples) directory for complete standalone examples.
 
 * [`websocket_test.go`](_examples/websocket_test.go)
 
-    Testing a WebSocket server based on [`gorilla/websocket`](https://github.com/gorilla/websocket). Tests invoke the `http.Handler` or `fasthttp.RequestHandler` directly.
+    Testing a WebSocket server based on [`fasthttp/websocket`](https://github.com/fasthttp/websocket). Tests invoke the `http.Handler` or `fasthttp.RequestHandler` directly.
 
 * [`oauth2_test.go`](_examples/oauth2_test.go)
 

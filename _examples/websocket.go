@@ -3,9 +3,8 @@ package examples
 import (
 	"net/http"
 
-	"github.com/gorilla/websocket"
+	"github.com/fasthttp/websocket"
 
-	fastwebsocket "github.com/fasthttp/websocket"
 	"github.com/valyala/fasthttp"
 )
 
@@ -32,8 +31,8 @@ func WsHTTPHandler(w http.ResponseWriter, r *http.Request) {
 // WsFastHandler is a simple fasthttp.RequestHandler that implements
 // WebSocket echo server.
 func WsFastHTTPHandler(ctx *fasthttp.RequestCtx) {
-	var upgrader fastwebsocket.FastHTTPUpgrader
-	err := upgrader.Upgrade(ctx, func(c *fastwebsocket.Conn) {
+	var upgrader websocket.FastHTTPUpgrader
+	err := upgrader.Upgrade(ctx, func(c *websocket.Conn) {
 		defer c.Close()
 		for {
 			mt, message, err := c.ReadMessage()

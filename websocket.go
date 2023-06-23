@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/gorilla/websocket"
+	"github.com/fasthttp/websocket"
 )
 
 var (
@@ -239,7 +239,7 @@ func (ws *Websocket) Disconnect() *Websocket {
 // If not, then "1000 - Normal Closure" will be used.
 //
 // WebSocket close codes are defined in RFC 6455, section 11.7.
-// See also https://godoc.org/github.com/gorilla/websocket#pkg-constants
+// See also https://godoc.org/github.com/fasthttp/websocket#pkg-constants
 //
 // It's okay to call this function multiple times.
 //
@@ -278,7 +278,7 @@ func (ws *Websocket) Close(code ...int) *Websocket {
 // If not, then "1000 - Normal Closure" will be used.
 //
 // WebSocket close codes are defined in RFC 6455, section 11.7.
-// See also https://godoc.org/github.com/gorilla/websocket#pkg-constants
+// See also https://godoc.org/github.com/fasthttp/websocket#pkg-constants
 //
 // It's okay to call this function multiple times.
 //
@@ -317,7 +317,7 @@ func (ws *Websocket) CloseWithBytes(b []byte, code ...int) *Websocket {
 // If not, then "1000 - Normal Closure" will be used.
 //
 // WebSocket close codes are defined in RFC 6455, section 11.7.
-// See also https://godoc.org/github.com/gorilla/websocket#pkg-constants
+// See also https://godoc.org/github.com/fasthttp/websocket#pkg-constants
 //
 // It's okay to call this function multiple times.
 //
@@ -376,7 +376,7 @@ func (ws *Websocket) CloseWithJSON(
 // If not, then "1000 - Normal Closure" will be used.
 //
 // WebSocket close codes are defined in RFC 6455, section 11.7.
-// See also https://godoc.org/github.com/gorilla/websocket#pkg-constants
+// See also https://godoc.org/github.com/fasthttp/websocket#pkg-constants
 //
 // It's okay to call this function multiple times.
 //
@@ -412,10 +412,10 @@ func (ws *Websocket) CloseWithText(s string, code ...int) *Websocket {
 // Additionally, WebSocket close code may be specified for close messages.
 //
 // WebSocket message types are defined in RFC 6455, section 11.8.
-// See also https://godoc.org/github.com/gorilla/websocket#pkg-constants
+// See also https://godoc.org/github.com/fasthttp/websocket#pkg-constants
 //
 // WebSocket close codes are defined in RFC 6455, section 11.7.
-// See also https://godoc.org/github.com/gorilla/websocket#pkg-constants
+// See also https://godoc.org/github.com/fasthttp/websocket#pkg-constants
 //
 // Example:
 //

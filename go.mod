@@ -9,7 +9,6 @@ require (
 	github.com/fatih/structs v1.1.0
 	github.com/gobwas/glob v0.2.3
 	github.com/google/go-querystring v1.1.0
-	github.com/gorilla/websocket v1.4.2
 	github.com/imkira/go-interpol v1.1.0
 	github.com/mattn/go-isatty v0.0.17
 	github.com/mitchellh/go-wordwrap v1.0.1

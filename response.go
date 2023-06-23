@@ -15,7 +15,7 @@ import (
 	"time"
 
 	"github.com/ajg/form"
-	"github.com/gorilla/websocket"
+	"github.com/fasthttp/websocket"
 )
 
 // Response provides methods to inspect attached http.Response object.

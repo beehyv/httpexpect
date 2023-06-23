@@ -20,9 +20,9 @@ import (
 	"time"
 
 	"github.com/ajg/form"
+	"github.com/fasthttp/websocket"
 	"github.com/fatih/structs"
 	"github.com/google/go-querystring/query"
-	"github.com/gorilla/websocket"
 	"github.com/imkira/go-interpol"
 )
 
@@ -861,7 +861,7 @@ func (r *Request) WithRetryDelay(minDelay, maxDelay time.Duration) *Request {
 //	Connection: Upgrade
 //
 // The actual set of header fields is define by the protocol implementation
-// in the gorilla/websocket package.
+// in the fasthttp/websocket package.
 //
 // The user should then call the Response.Websocket() method which returns
 // the Websocket instance. This instance can be used to send messages to the

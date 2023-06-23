@@ -7,7 +7,7 @@ import (
 	"net/http/httptest"
 	"sync"
 
-	"github.com/gorilla/websocket"
+	"github.com/fasthttp/websocket"
 	"github.com/valyala/fasthttp"
 )
 

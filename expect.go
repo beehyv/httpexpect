@@ -82,7 +82,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/gorilla/websocket"
+	"github.com/fasthttp/websocket"
 )
 
 // Expect is a toplevel object that contains user Config and allows

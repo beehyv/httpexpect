@@ -6,9 +6,8 @@ import (
 	"testing"
 	"time"
 
-	fastwebsocket "github.com/fasthttp/websocket"
+	"github.com/fasthttp/websocket"
 	"github.com/gavv/httpexpect/v2"
-	"github.com/gorilla/websocket"
 	"github.com/stretchr/testify/assert"
 	"github.com/valyala/fasthttp"
 )
@@ -58,11 +57,11 @@ func createWebsocketHandler(opts wsHandlerOpts) http.Handler {
 }
 
 func websocketFastHandler(ctx *fasthttp.RequestCtx) {
-	var upgrader fastwebsocket.FastHTTPUpgrader
+	var upgrader websocket.FastHTTPUpgrader
 
 	ctx.Response.Header.Set("X-Test", "test_header")
 
-	err := upgrader.Upgrade(ctx, func(c *fastwebsocket.Conn) {
+	err := upgrader.Upgrade(ctx, func(c *websocket.Conn) {
 		defer c.Close()
 
 		for {

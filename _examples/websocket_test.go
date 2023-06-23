@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"testing"
 
+	"github.com/fasthttp/websocket"
 	"github.com/gavv/httpexpect/v2"
-	"github.com/gorilla/websocket"
 )
 
 func wsHandlerTester(t *testing.T) *httpexpect.Expect {
